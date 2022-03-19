@@ -1,10 +1,11 @@
 import React from 'react'
+import { Header } from './components/Header'
 
 export const App = () => {
   return (
     <>
-      <h1>Where in the world?</h1>
-      <p>Initial setup</p>
+      <Header />
+
     </>
   )
 }
