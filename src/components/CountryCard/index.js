@@ -1,0 +1,22 @@
+import React from 'react'
+import './styles.scss'
+
+export const CountryCard = ({ flag, name, population, region, capital }) => {
+  return (
+    <article className='CountryCard'>
+      <img src={flag} alt={name} className='CountryCard__img' />
+      <p className='CountryCard__name'>{name}</p>
+      <ul className='CountryCard__list'>
+        <li>
+          <span>Population: </span> {population}
+        </li>
+        <li>
+          <span>Region: </span> {region}
+        </li>
+        <li>
+          <span>Capital: </span> {capital}
+        </li>
+      </ul>
+    </article>
+  )
+}
