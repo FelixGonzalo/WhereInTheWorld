@@ -1,9 +1,17 @@
+@import '../../styles/colors.scss', '../../styles/animations.scss';
+
+.CountryCard__container {
+  min-height: 150px;
+  width: 100%;
+}
+
 .CountryCard {
   width: 100%;
   overflow: hidden;
-  background: #ffffff;
-  box-shadow: 0px 0px 3px #cacaca;
+  background: $color-light-elements;
+  box-shadow: 0px 0px 3px get-opacity($color-light-input, 0.3);;
   border-radius: 5px;
+  animation: 1.5s show_opacity;
   &__img {
     width: 100%;
     object-fit: cover;

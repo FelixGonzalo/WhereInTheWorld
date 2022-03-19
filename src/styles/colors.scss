@@ -1,0 +1,11 @@
+$color-dark-elements: hsl(209, 23%, 22%);
+$color-dark-background: hsl(207, 26%, 17%);
+$color-dark-text: hsl(0, 0%, 100%);
+$color-light-elements: hsl(0, 0%, 100%);
+$color-light-background: hsl(0, 0%, 98%);
+$color-light-text: hsl(200, 15%, 8%);
+$color-light-input: hsl(0, 0%, 52%);
+
+@function get-opacity($color, $amount) {
+  @return rgba($color, $amount);
+}

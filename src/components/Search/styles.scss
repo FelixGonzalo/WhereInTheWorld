@@ -1,0 +1,21 @@
+@import '../../styles/colors.scss';
+
+.Search {
+  margin: 30px 20px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0px 10px get-opacity($color-light-input, 0.3);
+  border-radius: 5px;
+  &__btn {
+    margin-right: 10px;
+    color: $color-light-input;
+  }
+  &__input {
+    background: none;
+    border: none;
+    outline: none;
+    color: $color-light-input;
+    font-weight: 600;
+  }
+}

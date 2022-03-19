@@ -1,0 +1,12 @@
+@import 'normalize.scss', './colors.scss', './fonts.scss', 'resetters.scss';
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  background: $color-light-background;
+  color: $color-light-text;
+}
+
+button {
+  @include reset-btn;
+}
