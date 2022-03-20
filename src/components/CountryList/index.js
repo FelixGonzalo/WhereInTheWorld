@@ -12,7 +12,7 @@ export const CountryList = () => {
     setLoading(true)
     getAllCountries()
       .then(data => {
-        data.length = 10
+        // data.length = 50
         setCountries(data)
         setLoading(false)
       })
@@ -28,14 +28,14 @@ export const CountryList = () => {
 
   return (
     <section className='CountryList'>
-      {countries.map(country => (
+      {countries.map((country) => (
         <CountryCard
-          key={country.cca3 + country.ccn3 + country.cioc}
+          key={country.cca3 + country.ccn3 + country?.cioc}
           flag={country.flags.png}
           name={country.name.common}
           population={country.population}
           region={country.region}
-          capital={country.capital[0] || ''}
+          capital={country.capital}
         />
       ))}
     </section>
