@@ -1,13 +1,10 @@
 import React from 'react'
-import { CountryList } from './components/CountryList'
-import { Header } from './components/Header'
-import { Search } from './components/Search'
+import { Home } from './pages/Home'
+
 export const App = () => {
   return (
     <>
-      <Header />
-      <Search />
-      <CountryList />
+      <Home />
     </>
   )
 }
