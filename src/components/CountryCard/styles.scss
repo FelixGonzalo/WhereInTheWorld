@@ -3,6 +3,8 @@
 .CountryCard__container {
   min-height: 150px;
   width: 100%;
+  text-decoration: none;
+  color: $color-light-text;
 }
 
 .CountryCard {
@@ -14,7 +16,8 @@
   animation: 1.5s show_opacity;
   &__img {
     width: 100%;
-    object-fit: cover;
+    min-height: 190px;
+    max-height: 190px;
   }
   &__name {
     margin: 0;

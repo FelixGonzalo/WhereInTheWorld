@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './styles.scss'
 import { useNearScreen } from '../../hooks/useNearScreen'
 
@@ -6,7 +7,7 @@ export const CountryCard = ({ flag, name, population, region, capital }) => {
   const [show, element] = useNearScreen()
 
   return (
-    <article className='CountryCard__container' ref={element}>
+    <Link className='CountryCard__container' ref={element} to={`/${name}`}>
       {show
         ? (
           <div className='CountryCard'>
@@ -28,6 +29,6 @@ export const CountryCard = ({ flag, name, population, region, capital }) => {
         : (
             ''
           )}
-    </article>
+    </Link>
   )
 }
