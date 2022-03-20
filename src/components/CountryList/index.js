@@ -4,7 +4,7 @@ import { CountryCard } from '../CountryCard'
 import { getAllCountries } from '../../services/Countries/getAllCountries'
 import { Loader } from '../Loader'
 
-export const CountryList = ({ searchName }) => {
+export const CountryList = ({ searchName, searchRegion }) => {
   const [countries, setCountries] = useState([])
   const [loading, setLoading] = useState(true)
 
@@ -12,7 +12,6 @@ export const CountryList = ({ searchName }) => {
     setLoading(true)
     getAllCountries()
       .then(data => {
-        // data.length = 50
         setCountries(data)
         setLoading(false)
       })
@@ -26,27 +25,52 @@ export const CountryList = ({ searchName }) => {
     return <Loader />
   }
 
-  if (searchName.length > 0) {
+  if (searchName?.length > 0) {
     return (
       <section className='CountryList'>
-        {
-          countries.map(country => {
-            if (country.name.common.toLowerCase().includes(searchName.toLowerCase())) {
-              return (
-                <CountryCard
-                  key={country.cca3 + country.ccn3 + country?.cioc}
-                  flag={country.flags.png}
-                  name={country.name.common}
-                  population={country.population}
-                  region={country.region}
-                  capital={country.capital}
-                />
-              )
-            } else {
-              return ''
-            }
-          })
-        }
+        {countries.map(country => {
+          if (
+            country.name.common.toLowerCase().includes(searchName.toLowerCase())
+          ) {
+            return (
+              <CountryCard
+                key={country.cca3 + country.ccn3 + country?.cioc}
+                flag={country.flags.png}
+                name={country.name.common}
+                population={country.population}
+                region={country.region}
+                capital={country.capital}
+              />
+            )
+          } else {
+            return ''
+          }
+        })}
+      </section>
+    )
+  }
+
+  if (searchRegion?.length > 0) {
+    return (
+      <section className='CountryList'>
+        {countries.map(country => {
+          if (
+            country.region.toLowerCase().includes(searchRegion.toLowerCase())
+          ) {
+            return (
+              <CountryCard
+                key={country.cca3 + country.ccn3 + country?.cioc}
+                flag={country.flags.png}
+                name={country.name.common}
+                population={country.population}
+                region={country.region}
+                capital={country.capital}
+              />
+            )
+          } else {
+            return ''
+          }
+        })}
       </section>
     )
   }
