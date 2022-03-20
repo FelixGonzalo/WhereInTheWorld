@@ -19,3 +19,10 @@
     font-weight: 600;
   }
 }
+
+@media (min-width: 1024px) {
+  .Search {
+    width: 100%;
+    max-width: 500px;
+  }
+}

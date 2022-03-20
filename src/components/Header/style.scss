@@ -1,12 +1,15 @@
 @import '../../styles/colors.scss';
 
+.Header__container {
+  background: $color-light-elements;
+  box-shadow: 0px 1px 2px get-opacity($color-light-input, 0.3);
+}
+
 .Header {
   padding: 10px 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background: $color-light-elements;
-  box-shadow: 0px 1px 2px get-opacity($color-light-input, 0.3);
   &__title {
     font-size: 16px;
   }
@@ -16,5 +19,13 @@
     align-items: center;
     gap: 8px;
     font-weight: 600;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Header {
+    &__title {
+      font-size: 24px;
+    }
   }
 }

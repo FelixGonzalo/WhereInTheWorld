@@ -1,6 +1,32 @@
 .CountryList {
-  padding: 10px 40px 40px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   gap: 40px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .CountryList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .CountryList {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .CountryList {
+    padding: 10px 20px 80px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 80px;
+  }
 }
