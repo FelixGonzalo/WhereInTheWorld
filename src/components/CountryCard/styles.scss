@@ -11,7 +11,7 @@
   width: 100%;
   overflow: hidden;
   background: $color-light-elements;
-  box-shadow: 0px 0px 3px get-opacity($color-light-input, 0.3);;
+  box-shadow: 0px 0px 5px get-opacity($color-light-shadow, 0.3);
   border-radius: 5px;
   animation: 1.5s show_opacity;
   &__img {
@@ -36,5 +36,15 @@
         font-weight: 600;
       }
     }
+  }
+}
+
+.theme_dark {
+  .CountryCard__container {
+    color: $color-dark-text;
+  }
+  .CountryCard {
+    background: $color-dark-elements;
+    box-shadow: 0px 0px 5px get-opacity($color-dark-shadow, 0.3);
   }
 }

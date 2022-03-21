@@ -44,3 +44,10 @@
     transform: rotate(360deg);
   }
 }
+
+.theme_dark {
+  .lds-ring div {
+    border: 8px solid $color-dark-text;
+    border-color: $color-dark-text transparent transparent transparent;
+  }
+}

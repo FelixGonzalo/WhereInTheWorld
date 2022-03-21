@@ -2,7 +2,7 @@
 
 .Header__container {
   background: $color-light-elements;
-  box-shadow: 0px 1px 2px get-opacity($color-light-input, 0.3);
+  box-shadow: 0px 1px 2px get-opacity($color-light-shadow, 0.3);
 }
 
 .Header {
@@ -19,6 +19,7 @@
     align-items: center;
     gap: 8px;
     font-weight: 600;
+    color: $color-light-text;
   }
 }
 
@@ -27,5 +28,15 @@
     &__title {
       font-size: 24px;
     }
+  }
+}
+
+.theme_dark {
+  .Header__container {
+    background: $color-dark-elements;
+    box-shadow: 0px 1px 2px get-opacity($color-dark-shadow, 0.3);
+  }
+  .Header__btn {
+    color: $color-dark-text;
   }
 }
