@@ -9,12 +9,17 @@ export const Home = () => {
   const [searchName, setSearchName] = useState('')
   const [searchRegion, setSearchRegion] = useState('')
 
+  const handleSetSearchRegion = (value) => {
+    setSearchName('')
+    setSearchRegion(value)
+  }
+
   return (
     <>
       <Header />
       <div className='Home__menu'>
         <Search searchName={searchName} setSearchName={setSearchName} />
-        <Select setSearchRegion={setSearchRegion} />
+        <Select setSearchRegion={handleSetSearchRegion} />
       </div>
       <CountryList searchName={searchName} searchRegion={searchRegion} />
     </>

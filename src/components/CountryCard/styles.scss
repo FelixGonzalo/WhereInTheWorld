@@ -39,6 +39,15 @@
   }
 }
 
+@media (min-width: 1200px) {
+  .CountryCard__container {
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+}
+
 .theme_dark {
   .CountryCard__container {
     color: $color-dark-text;

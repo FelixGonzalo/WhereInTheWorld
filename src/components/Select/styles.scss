@@ -14,8 +14,8 @@
 
 .theme_dark {
   .Select {
-    box-shadow: 0px 0px 10px get-opacity($color-dark-shadow, 0.3);
     background: $color-dark-elements;
+    box-shadow: 0px 0px 5px get-opacity($color-dark-shadow, 0.3);
     color: $color-dark-text;
   }
 }

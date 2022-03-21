@@ -128,7 +128,7 @@ export const CountryDetail = () => {
                       ))
                     )
                   : (
-                    <p>There is not</p>
+                    <p>There is no data</p>
                     )}
               </div>
             </section>{' '}

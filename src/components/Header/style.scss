@@ -28,6 +28,12 @@
     &__title {
       font-size: 24px;
     }
+    &__btn {
+      transition: 0.3s;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
   }
 }
 

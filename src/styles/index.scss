@@ -9,6 +9,10 @@ button {
   @include reset-btn;
 }
 
+select {
+  cursor: pointer;
+}
+
 input, select {
   font-family: 'Nunito Sans', sans-serif;
 }
