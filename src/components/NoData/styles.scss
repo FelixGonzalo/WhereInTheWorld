@@ -1,0 +1,11 @@
+@import '../../styles/colors.scss';
+
+.NoData {
+  text-align: center;
+  font-weight: 600;
+  color: $color-light-input;
+}
+
+.theme_dark {
+  color: $color-dark-input;
+}

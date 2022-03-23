@@ -2,16 +2,28 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './styles.scss'
 import { useNearScreen } from '../../hooks/useNearScreen'
+import { handleFriendlyUrl } from '../../utils/handleFriendlyUrl'
 
 export const CountryCard = ({ flag, name, population, region, capital }) => {
   const [show, element] = useNearScreen()
 
   return (
-    <Link className='CountryCard__container' ref={element} to={`/${name}`}>
+    <article className='CountryCard__container' ref={element}>
       {show
         ? (
           <div className='CountryCard'>
-            <img src={flag} alt={name} className='CountryCard__img' />
+            <Link
+              to={`/${handleFriendlyUrl(name)}`}
+              aria-label={`Ver más sobre ${name}`}
+            >
+              <img
+                src={flag}
+                alt={name}
+                className='CountryCard__img'
+                height='150px'
+                width='200px'
+              />
+            </Link>
             <p className='CountryCard__name'>{name}</p>
             <ul className='CountryCard__list'>
               <li>
@@ -29,6 +41,6 @@ export const CountryCard = ({ flag, name, population, region, capital }) => {
         : (
             ''
           )}
-    </Link>
+    </article>
   )
 }

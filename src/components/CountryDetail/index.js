@@ -4,6 +4,7 @@ import { Loader } from '../Loader'
 import { MdKeyboardBackspace } from 'react-icons/md'
 import { getCountryByName } from '../../services/Countries/getCountryByName'
 import { getCountriesByCodes } from '../../services/Countries/getCountriesByCodes'
+import { handleFriendlyUrl } from '../../utils/handleFriendlyUrl'
 
 import './styles.scss'
 
@@ -17,7 +18,7 @@ export const CountryDetail = () => {
 
   useEffect(() => {
     setLoading(true)
-    getCountryByName(country)
+    getCountryByName(handleFriendlyUrl(country))
       .then(data => {
         setCountryDetail(data[0])
         if (data[0].borders) {
@@ -28,7 +29,7 @@ export const CountryDetail = () => {
               setLoading(false)
             })
             .catch(error => {
-              console.log(error)
+              console.error(error)
               setLoading(false)
             })
         } else {
@@ -36,7 +37,7 @@ export const CountryDetail = () => {
         }
       })
       .catch(error => {
-        console.log(error)
+        console.error(error)
         setLoading(false)
       })
   }, [useParams()])
@@ -122,7 +123,11 @@ export const CountryDetail = () => {
                 {bordersCountries.length > 0
                   ? (
                       bordersCountries.map(border => (
-                        <Link key={border} className='CountryDetail__border' to={`/${border}`}>
+                        <Link
+                          key={border}
+                          className='CountryDetail__border'
+                          to={`/${handleFriendlyUrl(border)}`}
+                        >
                           {border}
                         </Link>
                       ))

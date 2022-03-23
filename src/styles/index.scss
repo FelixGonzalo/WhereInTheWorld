@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Nunito Sans', sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 button {
@@ -21,5 +21,7 @@ input, select {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
   box-sizing: border-box;
 }
