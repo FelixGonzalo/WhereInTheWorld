@@ -20,11 +20,11 @@ export const CountryCard = ({ flag, name, population, region, capital }) => {
                 src={flag}
                 alt={name}
                 className='CountryCard__img'
-                height='150px'
-                width='200px'
+                height='150'
+                width='200'
               />
             </Link>
-            <p className='CountryCard__name'>{name}</p>
+            <h2 className='CountryCard__name'>{name}</h2>
             <ul className='CountryCard__list'>
               <li>
                 <span>Population: </span> {population}
