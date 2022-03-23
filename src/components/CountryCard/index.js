@@ -8,7 +8,7 @@ export const CountryCard = ({ flag, name, population, region, capital }) => {
   const [show, element] = useNearScreen()
 
   return (
-    <article className='CountryCard__container' ref={element}>
+    <div className='CountryCard__container' ref={element}>
       {show
         ? (
           <div className='CountryCard'>
@@ -24,7 +24,7 @@ export const CountryCard = ({ flag, name, population, region, capital }) => {
                 width='200'
               />
             </Link>
-            <h2 className='CountryCard__name'>{name}</h2>
+            <p className='CountryCard__name'>{name}</p>
             <ul className='CountryCard__list'>
               <li>
                 <span>Population: </span> {population}
@@ -41,6 +41,6 @@ export const CountryCard = ({ flag, name, population, region, capital }) => {
         : (
             ''
           )}
-    </article>
+    </div>
   )
 }
