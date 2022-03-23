@@ -10,7 +10,7 @@ export const Search = ({ searchName, setSearchName }) => {
 
   return (
     <div className='Search'>
-      <button className='Search__btn'>
+      <button className='Search__btn' aria-label='search country'>
         <FaSearch />
       </button>
       <input

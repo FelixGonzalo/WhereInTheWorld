@@ -8,7 +8,7 @@ export const Select = ({ setSearchRegion }) => {
   }
 
   return (
-    <select onChange={handleChange} className='Select'>
+    <select onChange={handleChange} className='Select' aria-label='Filter by region'>
       <option value=''>All</option>
       <option value='africa'>Africa</option>
       <option value='america'>America</option>
